@@ -20,7 +20,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a matBadge="{{artworkService.wishlist.length}}" [ngStyle]="{'width':!collapsed?'30px':'90px'}" matBadgeOverlap="false" matBadgeColor="accent" class="nav-link my-auto mt-3 mx-2 text-white" href="/wishlist">
+                    <a *ngIf="artworkService.wishlist.length!==0" matBadge="{{artworkService.wishlist.length}}" [ngStyle]="{'width':!collapsed?'30px':'90px'}" matBadgeOverlap="false" matBadgeColor="accent" class="nav-link my-auto mt-3 mx-2 text-white" href="/wishlist">
+                        <span class="mx-1 fs-4 wishlist" *ngIf="collapsed">Wishlist</span>
+                        <span class="mx-1 fs-4" *ngIf="!collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg></span>
+                       
+                    </a>
+                    <a  *ngIf="artworkService.wishlist.length===0" [ngStyle]="{'width':!collapsed?'30px':'90px'}" matBadgeOverlap="false" matBadgeColor="accent" class="nav-link my-auto mt-3 mx-2 text-white" href="/wishlist">
                         <span class="mx-1 fs-4 wishlist" *ngIf="collapsed">Wishlist</span>
                         <span class="mx-1 fs-4" *ngIf="!collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
