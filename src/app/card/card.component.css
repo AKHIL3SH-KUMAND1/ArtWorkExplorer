@@ -1,0 +1,23 @@
+.card-img-top{
+    max-height: 200px;
+    overflow: hidden;
+}
+.card{
+    height: 320px;
+    background: rgb(76, 78, 72);
+    position: relative;
+    font-family: 'EB Garamond', serif;
+}
+h4{
+    font-family: 'EB Garamond', serif;
+
+}
+
+.img-container{
+    height: 200px;
+
+}
+
+.button{
+    background-color: rgb(153, 0, 17)!important;
+}

@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center">
+    <p class="display-6 mx-auto fw-bold">Wishlist</p>
+</div>
+
+
+<div class="wishlist-container" [@noItemsAnimation]="noItemsState">
+    <div *ngIf="wishlistedItems.length === 0 && wishlist.length !== 0" class="d-flex justify-content-center">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div class="d-flex justify-content-center align-items-center" *ngIf="wishlist.length === 0 ">
+        <p class="display-6 text-dark mt-5">Your wishlist is empty... <br>Add more artworks</p>
+        
+    </div>
+    <div class="container d-flex justify-content-evenly flex-wrap mt-5" *ngIf="wishlist.length!==0">
+        <app-card class="m-2" *ngFor="let artwork of wishlistedItems" workId="{{artwork.id}}"
+            image_id="{{artwork.image_id}}" title="{{artwork.title}}"
+            (deleteItemEvent)="deleteFromWishlist($event)"></app-card>
+    </div>
+</div>
