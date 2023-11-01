@@ -57,7 +57,7 @@ export class ArtworkService {
       ids = ids + id.toString() + ",";
     })
     ids = ids.slice(0,ids.length-1)
-    const url = "https://api.artic.edu/api/v1/artworks?" + ids + "&fields=id,title,image_id"
+    const url = "https://api.artic.edu/api/v1/artworks?" + ids + "&fields=id,title,image_id,artist_titles"
     return this.httpClient.get<WishlistedArtwork>(url);
   }
 

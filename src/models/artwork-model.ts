@@ -53,7 +53,8 @@ export interface DisplayData{
 export interface WishlistedData{
     id:number,
     title:string,
-    image_id:string
+    image_id:string,
+    artist_titles:string[]
 }
 
 export interface WishlistedArtwork{

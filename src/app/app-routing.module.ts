@@ -16,6 +16,10 @@ const routes: Routes = [
     component:ArtworkDisplayComponent
   },
   {
+    path : '*',
+    component : HomeComponent
+  },
+  {
     path:"wishlist",
     component:WishlistComponent
   },
@@ -23,6 +27,7 @@ const routes: Routes = [
     path:"Artwork/:id",
     component:ArtworkExpandedComponent
   }
+
 ];
 
 @NgModule({

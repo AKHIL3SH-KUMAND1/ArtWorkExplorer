@@ -13,7 +13,7 @@
     </div>
     <div class="container d-flex justify-content-evenly flex-wrap mt-5" *ngIf="wishlist.length!==0">
         <app-card class="m-2" *ngFor="let artwork of wishlistedItems" workId="{{artwork.id}}"
-            image_id="{{artwork.image_id}}" title="{{artwork.title}}"
+            image_id="{{artwork.image_id}}" title="{{artwork.title}}" artist="{{artwork.artist_titles[0]}}"
             (deleteItemEvent)="deleteFromWishlist($event)"></app-card>
     </div>
 </div>
