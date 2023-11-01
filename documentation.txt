@@ -1,0 +1,31 @@
+Home page:
+->The home page is the landing page , it contains a few content related to the Chicago Art Institute exhibitions.
+->The navbar at the top allows us to route and access the artworks as well as wishlist page.
+->The page is completely responsive
+
+Navbar:
+->The navbar contains routes to the home,artworks and wishlist page.
+->The navbar collapses when the screen size decreases giving us a dropdown option.
+->The wishlist link has a badge over it to display the number of items in the wishlist
+
+Artwork page:
+->The artwork page contains the artworks in the form of cards along with a pagination at the bottom to allow the 
+user to select the page as well as number of artworks on the page.
+->The top of the page has a search bar that filters the data based on the query.
+->Clicking the heart icon on the artworks card adds the item to the wishlist as well as renders a green message 
+saying the item has been added to the wishlist for 2 seconds.
+->Clicking the explore button on the card opens the explore page of the specific artwork.
+
+Wishlist page:
+->The wishlist page contains the wishlisted items , these items are stored in the local storage and fetched from there.
+->Clicking the heart again removes it from the wishlist as well as from the local storage.
+->If it is empty a small animation showing the cart is empty pops up and stays.
+
+Explore page:
+->Here the artwork is displayed at its full size with the title in a large size.
+->If they exist then the description,publication history,exhibition history,place of origin,artist details,categories
+are displayed in the page.
+->The share buttons allow us to share the artwork to social media, being on local host doesnt allow us to share it 
+as of now.
+
+
