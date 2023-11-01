@@ -23,21 +23,17 @@ export class ArtworkExpandedComponent {
     })
   }
 
-  shareTwitter(){
-    this.artworkService.shareOnTwitter(this.url,(this.artworkData[0].description as string))
+  share(){
+   
+    navigator.share({
+      title : "art",
+      text : "check out this art",
+      url : String(window.location.href),
+     
+   
+    })
   }
-
-  shareFacebook(){
-    this.artworkService.shareOnFacebook(this.url)
-  }
-
-  shareGoogle(){
-    this.artworkService.shareOnGooglePlus(this.url)
-  }
-
-  sharePinterest(){
-    this.artworkService.shareOnPinterest(this.url,("https://www.artic.edu/iiif/2/"+this.artworkData[0].image_id+"/full/843,/0/default.jpg"),(this.artworkData[0].description as string))
-  }
+ 
 
   
 }
